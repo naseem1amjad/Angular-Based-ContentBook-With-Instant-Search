@@ -1,0 +1,75 @@
+form {
+    display: flex;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.small-gap {
+    margin-right: 3vw;
+}
+
+#advancedToggle {
+    display: inline-block;
+    vertical-align: -7px;
+    flex-grow: 2;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    #searchField {
+        width: 80%;
+    }
+
+    #advancedToggle {
+        display: none;
+    }
+}
+
+.placeholder {
+    color: rgba(0, 0, 0, .45);
+}
+
+/*Input underline*/
+::ng-deep .mat-form-field-ripple {
+    background-color: #7ea0b9 !important;
+    /*background-color: rgba(0, 0, 0, .35) !important;*/
+}
+
+.container {
+    flex-grow: 3;
+    width: 40%;
+    display: flex;
+}
+
+.input {
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+input {
+    outline: none;
+    display: block;
+    padding: 10px 0;
+    border-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+.clear-button {
+    display: inline;
+}
+
+.clear-button mat-icon {
+    font-size: 16px;
+}
+
+.icon {
+    min-width: 0;
+}

@@ -1,0 +1,58 @@
+fieldset {
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 0 5vw;
+    position: sticky;
+    left: 5%;
+}
+
+@media screen and (max-width: 900px) {
+    fieldset {
+        margin-left: 4px;
+        width: initial;
+        left: 4px;
+        display: none;
+    }
+}
+
+legend {
+    -webkit-padding-start: 1vw;
+    -webkit-padding-end: 1vw;
+    -webkit-margin-start: 10vw;
+    line-height: 1.125;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
+}
+
+.team {
+    grid-column: auto /span 2;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.attendance {
+    display: none;
+}
+
+.clear {
+    background-color: #009788;
+    color: white;
+}

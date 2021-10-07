@@ -1,0 +1,63 @@
+<fieldset>
+	<legend>Filter</legend>
+	<form class="grid-container" *ngIf="selectsData">
+		<mat-form-field class="empName">
+			<input autocomplete="off" (keyup)="search()" matInput [(ngModel)]="NAME" name="empName" placeholder="Name">
+		</mat-form-field>
+		<mat-form-field class="dept">
+			<mat-select (selectionChange)="search()" [(ngModel)]="DEPARTMENT" name="dept" placeholder="Department">
+				<mat-option>None</mat-option>
+				<mat-option *ngFor="let dept of selectsData.depts" [value]="dept">
+					{{dept}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="team">
+			<mat-select (selectionChange)="search()" [(ngModel)]="TEAM_NAME" name="team" placeholder="Team">
+				<mat-option>None</mat-option>
+				<mat-option *ngFor="let team of selectsData.teams" [value]="team">
+					{{team}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="ext">
+			<input (keyup)="search()" matInput autocomplete="off" [(ngModel)]="TELEXTENSION" name="ext" placeholder="Extension">
+		</mat-form-field>
+		<mat-form-field class="desig">
+			<mat-select (selectionChange)="search()" [(ngModel)]="DESIGNATION" name="desig" placeholder="Designation">
+				<mat-option>None</mat-option>
+				<mat-option *ngFor="let desig of selectsData.desigs" [value]="desig">
+					{{desig}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="empCode">
+			<input (keyup)="search()" matInput [(ngModel)]="EMPCODE" autocomplete="off" name="empCode" placeholder="Employee Code">
+		</mat-form-field>
+		<div class="checkboxes">
+			<div>
+
+				<mat-checkbox (change)="search()" [(ngModel)]="ATTENDANCE" name="attendance" class="attendance">Attendance</mat-checkbox><br>
+				<mat-checkbox (change)="search() "[(ngModel)]="FAV" name="favorite" class="favorite" [checked]="this.url == '/favs'" [disabled]="this.url == '/favs'">Favorite</mat-checkbox>
+			</div>
+		</div>
+		<mat-form-field class="mobile">
+			<input (keyup)="search()" matInput [(ngModel)]="MOBILE" name="mobile" autocomplete="off" placeholder="Mobile">
+		</mat-form-field>
+		<mat-form-field class="bloodGroup">
+			<mat-select (selectionChange)="search()" [(ngModel)]="BLOODGROUP" name="bloodGroup" placeholder="Blood Group">
+				<mat-option>None</mat-option>
+				<mat-option *ngFor="let bloodGroup of selectsData.bloodGroups" [value]="bloodGroup">
+					{{bloodGroup}}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="vehicle">
+			<input (keyup)="search()" matInput [(ngModel)]="VEHICLE" name="vehicle" autocomplete="off" placeholder="Vehicle No.">
+		</mat-form-field>
+		<div class="buttons">
+			<!-- <button mat-raised-button type="button" (click)="search()">Search</button> -->
+			<button mat-raised-button type="button" (click)="clear()" class="clear">Clear Filter</button>
+		</div>
+	</form>
+</fieldset>

@@ -1,0 +1,44 @@
+<div class="main">
+    <mat-toolbar>
+        <a routerLink="home" class="logo-icon"><img src="assets/company_logo.png" class="logo-icon"></a>
+        <mat-menu #toolbarMenu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item routerLink="home">Home</button>
+            <button mat-menu-item routerLink="favs">Favorites</button>
+            <button mat-menu-item routerLink="links">Links</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="toolbarMenu" class="menu-button"
+                matTooltip="Click here for menu">
+            <mat-icon class="menu-icon-lg">more_vert</mat-icon>
+            <mat-icon class="menu-icon-sm">menu</mat-icon>
+            <!-- Change text of menu according to the url -->
+            <span class="menu-name">{{ menuName() }}</span>
+        </button>
+        <div class="small-gap animation-container">
+            <mat-icon class="animated-arrow">arrow_back</mat-icon>
+        </div>
+        <app-toolbar-search class="fill-gap"></app-toolbar-search>
+        <span class="small-gap"></span>
+        <span class="small-gap"></span>
+        <mat-menu #helpMenu="matMenu" [overlapTrigger]="true">
+            <div class="help-menu">
+                <a href="assets/UserDocumentation.pdf" target="_blank">Click here</a> to download/view help
+                document
+                <br>
+                <br>
+                <hr>
+                <span style="font-size:14px">An effort by Naseem Amjad</span><br/><span
+                    style="font-size:12px"><a href="mailto:urdujini@gmail.com?subject=ContactBook1.0: " title="Click here to give feedback !">Send FeedBack</a></span>
+            </div>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="helpMenu" class="help-button">
+            <mat-icon>help_outline</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div class="body">
+        <!-- Check app-routing.module.ts -->
+        <router-outlet></router-outlet>
+    </div>
+    <button mat-icon-button class="back-to-top mat-elevation-z10" matTooltip="Back to top">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,173 @@
+
+.small-gap {
+    flex: 0 1 10vw;
+}
+
+.fill-gap {
+    flex: 1 1 auto;
+}
+
+a {
+    height: 60%;
+}
+
+img.logo-icon {
+    height: 100%;
+}
+
+a.logo-icon {
+    display: inline;
+}
+
+.help-menu {
+    padding: 5px 30px;
+    cursor: default;
+    text-align: center;
+}
+
+.help-menu a {
+    text-decoration: none;
+}
+
+.help-menu i {
+    white-space: nowrap;
+}
+
+.help-button {
+    color: #5477C9;
+}
+
+.menu-button {
+    padding-left: 0;
+}
+
+.menu-name {
+    font-family: 'Museo', sans-serif;
+    font-size: 20px;
+}
+
+mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: solid 1px #E7E8EC;
+    background-color: white;
+    height: 75px;
+}
+
+.title {
+    color: #0120AE;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.body {
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    overflow: auto;
+    background-color: #F5F6FA;
+    background-color: var(--background);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    font-size: 44pt;
+    width: 1em;
+    height: 1em;
+    display: none;
+    background-color: #1A75BC;
+    background-color: var(--blue);
+    z-index: 99;
+}
+
+.back-to-top mat-icon {
+    font-size: 44pt;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    color: white;
+}
+
+.menu-icon-sm {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    /*.help-button {*/
+        /*display: none;*/
+    /*}*/
+}
+
+@media screen and (max-width: 800px) {
+    /*.help-button {*/
+    /*display: none;*/
+    /*}*/
+
+    .company {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .title {
+        display: none;
+    }
+
+    .logo-icon {
+        display: none;
+    }
+
+    .menu-icon-sm {
+        display: initial;
+    }
+
+    .menu-icon-lg {
+        display: none;
+    }
+}
+
+.animation-container {
+    display: flex;
+}
+
+.animated-arrow {
+    animation-name: move, fade;
+    animation-duration: 0.5s, 0.5s;
+    animation-direction: alternate, normal;
+    animation-iteration-count: 10, 1;
+    animation-delay: 3s, 7.5s;
+    animation-timing-function: ease, ease-in;
+    animation-fill-mode: none, forwards;
+    position: relative;
+    color: #ff8989;
+}
+
+@keyframes move {
+    0% {
+        padding-left: 0;
+    }
+    100% {
+        padding-left: 20%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

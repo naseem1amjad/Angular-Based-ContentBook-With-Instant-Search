@@ -1,0 +1,116 @@
+.main {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+mat-paginator {
+    background-color: #F5F6FA;
+    background-color: var(--background);
+}
+
+table {
+    min-width: 100%;
+    /* Following code disables copy paste from grid*/
+    /* -webkit-user-select: none; /* Chrome all / Safari all */
+    /* -moz-user-select: none; /* Firefox all */
+    /* -ms-user-select: none; /* IE 10+ */
+    /*user-select: none;*/
+    
+}
+
+.mat-cell, .mat-header-cell {
+    /* EXTRA PADDING */
+    /* padding: 0 1.5em; */
+    padding: 0 1em;
+    white-space: nowrap;
+    /*font-size: 12px;*/
+}
+
+.mat-header-cell {
+    z-index: 98 !important;
+    font-size: 11pt;
+    background-color: #1A75BC;
+    background-color: var(--blue);
+    color: white;
+    border-bottom: solid 2px #DADCDB;
+}
+
+.mat-column-FAV {
+    padding-left: 0 !important;
+    padding-right: 0;
+}
+
+.mat-column-NAME {
+    border-right: solid 1px #DADCDB;
+    padding-left: 0;
+}
+
+.mat-column-TELEXTENSION {
+    /*padding-right: 0;*/
+}
+
+.mat-header-cell.mat-column-EMPCODENUMBER, .mat-header-cell.mat-column-NAME {
+    z-index: 99 !important;
+}
+
+.mat-column-EMAIL a {
+    text-decoration: none;
+    color: #0080C0;
+}
+
+td:nth-child(n+4):nth-child(odd), th:nth-child(n+4):nth-child(odd) {
+    /* ALTERNATE COLUMNS */
+    /* background-color: rgb(247, 247, 247); */
+
+    /* LIGHT BORDERS */
+    border-right: 1px solid #DADCDB;
+    border-left: 1px solid #DADCDB;
+}
+
+/* INVERTED BORDERS */
+/* td:nth-child(n+4) { */
+/* 	background-color: #eeeeee77; */
+/* 	border-right: 1.5px solid #fff; */
+/* 	border-left: 1.5px solid #fff; */
+/* } */
+
+/* ALTERNATE ROWS */
+tr:nth-child(even) {
+background-color: rgb(230, 230, 245);
+}
+
+mat-paginator, .advanced-search {
+    position: sticky;
+    left: 0;
+}
+
+.advanced-search {
+    height: 0;
+    overflow: hidden;
+}
+
+.shown {
+    height: initial;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+::ng-deep .mat-sort-header-arrow {
+    color: #fff !important;
+}
+
+/*Center sort arrow of FAVS column*/
+.mat-column-FAV ::ng-deep .mat-sort-header-arrow {
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 680px) {
+    .mat-column-NAME, .mat-column-EMPCODENUMBER {
+        left: unset !important;
+    }
+}

@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~material-design-icons/iconfont/material-icons.css';
+
+@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 300;
+    src: url('assets/fonts/MuseoSans-300.eot'); /* IE9 Compat Modes @formatter:off*/
+    src: local('MuseoSans'), local('MuseoSans-300'),
+    /*url('assets/fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
+    url('assets/fonts/MuseoSans-300.woff') format('woff'), /* Modern Browsers */
+    url('assets/fonts/MuseoSans-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('assets/fonts/MuseoSans-300.svg#MuseoSans') format('svg'); /* Legacy iOS @formatter:on */
+}
+
+:root {
+    --blue: #0f436b;
+    --background: #F5F6FA;
+}
+
+html {
+    height: 100%;
+    font-family: Museo, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Museo, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+    .small-gap {
+        display: none !important;
+    }
+}

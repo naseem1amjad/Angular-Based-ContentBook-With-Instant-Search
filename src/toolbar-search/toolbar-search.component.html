@@ -1,0 +1,28 @@
+<form class="{{disabled?'hidden':''}}">
+    <div class="container mat-elevation-z2" [class.mat-elevation-z4]="hovering"
+            (mouseover)="hovering=true" (mouseout)="hovering=false">
+        <button class="icon" mat-button disabled>
+            <mat-icon>search</mat-icon>
+        </button>
+        <div class="input">
+            <input type="text" name="search" placeholder="Type here to search" autocomplete="off"
+                    [(ngModel)]="searchValue" (keyup)="applyFilter()" (focus)="clearAdvancedSearch()">
+        </div>
+        <button class="clear-button" *ngIf="searchValue" mat-icon-button
+                (click)="this.searchValue=''; applyFilter()" [disabled]="disabled">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <!--<button mat-button disabled matPrefix id="searchPrefix">-->
+    <!--<mat-icon>search</mat-icon>-->
+    <!--</button>-->
+
+
+    <!--
+    <div id="advancedToggle">
+        <mat-slide-toggle [(ngModel)]="advancedToggleVal" [disabled]="disabled" (change)="advancedToggle()"
+                name="advancedToggleVal" color="primary"><span class="filter-text">Filter</span>
+        </mat-slide-toggle>
+    </div>
+    -->
+</form>
