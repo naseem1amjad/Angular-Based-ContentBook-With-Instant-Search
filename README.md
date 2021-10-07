@@ -72,5 +72,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 To get more help on the Angular CLI use `ng help`
 
 ## Author
-You may contact me at naseem@technologist.com
-
+You may contact me at naseem@technologist.com to get help in setting up (i.e. Rest APIs for connectivity)
