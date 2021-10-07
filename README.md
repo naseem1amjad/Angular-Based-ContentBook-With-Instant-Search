@@ -54,7 +54,9 @@ styles.css = Top Level css
 	- Fetches data from local web service of all employees
 	Some fallback records for contact (incase unable to connect with WebService)
 
+## Configuration
 
+Run `npm install` to create node_modules folder and install relevant packages.
 
 ## Development server
 
